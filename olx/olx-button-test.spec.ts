@@ -1,11 +1,10 @@
-import { test, expect } from "@playwright/test"
+import { test } from "@playwright/test";
+import { CategoryPage } from "../page-objects/CategoryPage";
 
-test("Category dropdown opens", async ({ page }) => {
-    await page.goto("https://www.olx.ua/uk")
+test.only("Category dropdown opens", async ({ page }) => {
+    const categoryPage = new CategoryPage(page);
 
-    await page.click(".css-rbcfn3")
-    await page.click(".css-t0lbh8")
-
-    const dropdown = page.locator(".css-ydag0f")
-    await expect(dropdown).toBeVisible()
-})
+    await categoryPage.open();
+    await categoryPage.openCategory();
+    await categoryPage.expectDropdownVisible();
+});

@@ -1,18 +1,14 @@
-import { test, expect } from "@playwright/test";
+import { test } from "@playwright/test"
+import { SearchPage } from "../page-objects/SearchPage"
+import { SearchCityPage } from "../page-objects/SearchCityPage"
 
 test.only("Search with city filter", async ({ page }) => {
-    await page.goto("https://www.olx.ua/uk");
+    const searchPage = new SearchPage(page)
+    const searchCityPage = new SearchCityPage(page)
 
-    await page.getByPlaceholder("Що шукаєте?").fill("квартира");
-    const locationButton = page.locator("form").locator("button").nth(1);
-
-    await expect(locationButton).toBeVisible()
-    await locationButton.click()
-    const cityInput = page.locator("#location-input")
-    await expect(cityInput).toBeVisible()
-    await cityInput.fill("Харків")
-
-    await expect(page).not.toHaveURL("https://www.olx.ua/uk")
-});
+    await searchPage.open()
+    await searchCityPage.searchWithCity()
+    await searchPage.expectResultsPage()
+})
 
 

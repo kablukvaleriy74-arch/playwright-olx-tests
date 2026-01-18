@@ -1,10 +1,10 @@
-import { test, expect } from "@playwright/test"
+import { test } from "@playwright/test"
+import { SearchPage } from "../page-objects/SearchPage"
 
-test("Search opens results page", async ({ page }) => {
-    await page.goto("https://www.olx.ua/uk")
+test.only("Search opens results page", async ({ page }) => {
+    const searchPage = new SearchPage(page)
 
-    await page.fill("#search", "квартира")
-    await page.keyboard.press("Enter")
-
-    await expect(page).not.toHaveURL("https://www.olx.ua/uk")
+    await searchPage.open()
+    await searchPage.search()
+    await searchPage.expectResultsPage()
 })

@@ -1,12 +1,12 @@
-import { test, expect } from "@playwright/test"
+import { test } from "@playwright/test";
+import { FavoritesPage } from "../page-objects/FavouritePage";
 
-test("Open the favourite items", async ({ page }) => {
-    await page.goto("https://www.olx.ua/uk")
-    await page.click(".css-oo5g20")
+test.only("Open the favourite items", async ({ page }) => {
+    const favoritesPage = new FavoritesPage(page);
 
-    const pageTitle = page.locator("h2")
-    await expect(pageTitle).toBeVisible()
-    await expect(pageTitle).toContainText("Обрані результати пошуку")
-
-    await expect(page).toHaveURL("https://www.olx.ua/uk/favorites/search/")
-})
+    await favoritesPage.open();
+    await favoritesPage.openFavorites();
+    await favoritesPage.expectPageTitleVisible();
+    await favoritesPage.expectPageTitleContains("Обрані результати пошуку");
+    await favoritesPage.expectFavoritesUrl();
+});

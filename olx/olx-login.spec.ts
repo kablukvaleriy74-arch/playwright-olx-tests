@@ -1,12 +1,10 @@
-import { test, expect } from "@playwright/test"
+import { test } from "@playwright/test";
+import { LoginPage } from "../page-objects/LoginOlxPage"
 
-test("Login to account", async ({ page }) => {
-    await page.goto("https://www.olx.ua/uk")
-    await page.click("text=Ваш профіль")
+test.only("Login to account", async ({ page }) => {
+    const loginPage = new LoginPage(page)
 
-    await page.fill("#username", "some username")
-    await page.fill("#password", "password")
-
-    const loginButton = page.locator("#Login")
-    await expect(loginButton).toBeDisabled()
+    await loginPage.open()
+    await loginPage.login()
+    await loginPage.expectLoginButtonDisabled()
 })
