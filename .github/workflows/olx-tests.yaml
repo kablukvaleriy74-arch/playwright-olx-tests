@@ -22,10 +22,14 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci  
 
       - name: Install Playwright browsers
         run: npx playwright install
+        shell: bash
+
+      - name: Run OLX Playwright tests
+        run: npx playwright test olx --reporter=github
 
       - name: Run OLX Playwright tests
         run: npx playwright test olx --reporter=github
