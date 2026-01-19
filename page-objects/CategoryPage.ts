@@ -1,9 +1,9 @@
-import { Page, expect, Locator } from "@playwright/test"
+import { Page, Locator } from "@playwright/test"
 
 export class CategoryPage {
     readonly page: Page
 
-    private readonly baseUrl = "https://www.olx.ua/uk";
+    private readonly baseUrl = "https://www.olx.ua/uk"
 
     private readonly categoryButton: Locator
     private readonly subcategoryButton: Locator
@@ -13,9 +13,7 @@ export class CategoryPage {
         this.page = page
 
         this.categoryButton = page.locator(".css-rbcfn3").first()
-
         this.subcategoryButton = page.locator(".css-t0lbh8").first()
-
         this.dropdown = page.locator(".css-ydag0f")
     }
 
@@ -28,7 +26,13 @@ export class CategoryPage {
         await this.subcategoryButton.click()
     }
 
-    async expectDropdownVisible() {
-        await expect(this.dropdown).toBeVisible()
+
+    async isDropdownVisible(): Promise<boolean> {
+        return await this.dropdown.isVisible()
+    }
+
+    async isCategoryButtonVisible(): Promise<boolean> {
+        return await this.categoryButton.isVisible()
     }
 }
+
