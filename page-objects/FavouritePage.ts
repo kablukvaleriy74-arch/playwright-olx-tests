@@ -1,4 +1,4 @@
-import { Page, expect, Locator } from "@playwright/test"
+import { Page, Locator } from "@playwright/test"
 
 export class FavoritesPage {
     readonly page: Page
@@ -13,7 +13,6 @@ export class FavoritesPage {
         this.page = page
 
         this.favoritesButton = page.locator(".css-oo5g20")
-
         this.pageTitle = page.locator("h2")
     }
 
@@ -25,15 +24,16 @@ export class FavoritesPage {
         await this.favoritesButton.click()
     }
 
-    async expectPageTitleVisible() {
-        await expect(this.pageTitle).toBeVisible()
+    async isPageTitleVisible(): Promise<boolean> {
+        return await this.pageTitle.isVisible()
     }
 
-    async expectPageTitleContains(text: string) {
-        await expect(this.pageTitle).toContainText(text)
+    async doesPageTitleContain(text: string): Promise<boolean> {
+        const titleText = await this.pageTitle.textContent()
+        return titleText?.includes(text) ?? false
     }
 
-    async expectFavoritesUrl() {
-        await expect(this.page).toHaveURL(this.favoritesUrl)
+    async isFavoritesUrlOpened(): Promise<boolean> {
+        return this.page.url() === this.favoritesUrl
     }
 }

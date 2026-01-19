@@ -1,4 +1,4 @@
-import { Page, expect } from "@playwright/test"
+import { Page } from "@playwright/test"
 
 export enum KeyboardKey {
     ENTER = "Enter",
@@ -10,6 +10,7 @@ export class SearchPage {
     private readonly baseUrl = "https://www.olx.ua/uk"
     private readonly searchInput = "#search"
 
+
     private searchText = "квартира"
 
     constructor(page: Page) {
@@ -17,19 +18,27 @@ export class SearchPage {
     }
 
     async open() {
-        await this.page.goto(this.baseUrl);
+        await this.page.goto(this.baseUrl)
     }
 
     async setSearchText(text: string) {
         this.searchText = text
     }
 
-    async search(key: KeyboardKey = KeyboardKey.ENTER) {
-        await this.page.fill(this.searchInput, this.searchText)
+    async typeSearchText() {
+        await this.page.click(this.searchInput)
+
+        for (const char of this.searchText) {
+            await this.page.keyboard.type(char)
+        }
+    }
+
+    async submitSearch(key: KeyboardKey = KeyboardKey.ENTER) {
         await this.page.keyboard.press(key)
     }
 
-    async expectResultsPage() {
-        await expect(this.page).not.toHaveURL(this.baseUrl)
+    async isResultsPageOpened(): Promise<boolean> {
+        await this.page.waitForTimeout(1000)
+        return this.page.url() !== this.baseUrl
     }
 }

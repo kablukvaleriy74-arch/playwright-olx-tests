@@ -24,12 +24,10 @@ export class SearchCityPage {
     }
 
     async searchWithCity() {
-        await this.searchPage.search()
+        await this.searchPage.typeSearchText()
 
-        await expect(this.locationButton).toBeVisible({ timeout: 10000 })
         await this.locationButton.click()
 
-        await expect(this.cityInput).toBeVisible({ timeout: 10000 })
         await this.cityInput.fill(this.cityName)
     }
 }

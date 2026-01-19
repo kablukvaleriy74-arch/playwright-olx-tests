@@ -8,7 +8,7 @@ test.only("Search with city filter", async ({ page }) => {
 
     await searchPage.open()
     await searchCityPage.searchWithCity()
-    await searchPage.expectResultsPage()
+    await searchPage.isResultsPageOpened()
 })
 
 

@@ -1,4 +1,4 @@
-import { Page, expect, Locator } from "@playwright/test";
+import { Page, Locator } from "@playwright/test"
 
 export class LoginPage {
     readonly page: Page
@@ -23,7 +23,11 @@ export class LoginPage {
     }
 
     async open() {
-        await this.page.goto(this.baseUrl);
+        await this.page.goto(this.baseUrl)
+    }
+
+    async openLoginForm() {
+        await this.profileButton.click()
     }
 
     async setUsername(username: string) {
@@ -34,13 +38,22 @@ export class LoginPage {
         this.password = password
     }
 
-    async login() {
-        await this.profileButton.click()
-        await this.usernameInput.fill(this.username)
-        await this.passwordInput.fill(this.password)
+    async typeUsernameSlowly() {
+        await this.usernameInput.click()
+        for (const char of this.username) {
+            await this.page.keyboard.type(char)
+        }
     }
 
-    async expectLoginButtonDisabled() {
-        await expect(this.loginButton).toBeDisabled()
+    async typePasswordSlowly() {
+        await this.passwordInput.click()
+        for (const char of this.password) {
+            await this.page.keyboard.type(char)
+        }
+    }
+
+    async isLoginButtonDisabled(): Promise<boolean> {
+        return await this.loginButton.isDisabled()
     }
 }
+
