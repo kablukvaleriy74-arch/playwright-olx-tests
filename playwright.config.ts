@@ -1,8 +1,10 @@
 import { PlaywrightTestConfig } from "@playwright/test"
+import path from "path"
 
 const config: PlaywrightTestConfig = {
     timeout: 60000, 
-    retries: 0, 
+    retries: 0,
+    outputDir: path.join(process.cwd(), "artifacts"),
     use: {
         headless: true,
         viewport: { width: 1280, height: 720}, 
@@ -10,7 +12,7 @@ const config: PlaywrightTestConfig = {
         ignoreHTTPSErrors: true, 
         video: "on",
         screenshot: "on",
-        trace: "on", 
+        trace: "on",
     },
     projects: [
     {
