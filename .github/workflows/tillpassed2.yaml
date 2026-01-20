@@ -1,0 +1,56 @@
+name: Run OLX Playwright Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-olx-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Install Playwright browsers + SYSTEM DEPS 
+      - name: Install Playwright browsers with deps
+        run: npx playwright install --with-deps
+
+      # 5. Create artifacts folder
+      - name: Create artifacts folder
+        run: mkdir -p artifacts
+
+      # 6. Run tests (Chromium + Firefox + WebKit)
+      - name: Run Playwright tests
+        run: |
+          npx playwright test olx \
+            --reporter=html \
+            --output=artifacts
+
+      # 7. Debug artifacts
+      - name: List artifacts
+        if: always()
+        run: ls -R artifacts || true
+
+      # 8. Upload artifacts (ALWAYS)
+      - name: Upload Playwright artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-artifacts
+          path: artifacts
