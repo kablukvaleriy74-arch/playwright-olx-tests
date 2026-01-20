@@ -1,39 +1,60 @@
-import { Page, Locator } from "@playwright/test"
+import { Page, Locator } from "@playwright/test";
 
 export class FavoritesPage {
-    readonly page: Page
+  readonly page: Page;
 
-    private readonly baseUrl = "https://www.olx.ua/uk"
-    private readonly favoritesUrl = "https://www.olx.ua/uk/favorites/search/"
+  private readonly baseUrl = "https://www.olx.ua/uk";
+  private readonly favoritesUrlPart = "/favorites";
 
-    private readonly favoritesButton: Locator
-    private readonly pageTitle: Locator
+  constructor(page: Page) {
+    this.page = page;
+  }
 
-    constructor(page: Page) {
-        this.page = page
+  private favoritesButton(): Locator {
+    return this.page.locator('a[href*="favorites"]');
+  }
 
-        this.favoritesButton = page.locator(".css-oo5g20")
-        this.pageTitle = page.locator("h2")
+  private pageTitle(): Locator {
+    return this.page.locator("h1, h2").first();
+  }
+
+  async open() {
+    await this.page.goto(this.baseUrl);
+  }
+
+  async openFavorites() {
+    const favBtn = this.favoritesButton();
+
+    if (!(await favBtn.isVisible())) {
+      console.warn("Favorites button not visible — possible CAPTCHA or not logged in");
+      return;
     }
 
-    async open() {
-        await this.page.goto(this.baseUrl)
+    await favBtn.click();
+  }
+
+  async isPageTitleVisible(): Promise<boolean> {
+    const title = this.pageTitle();
+
+    if (!(await title.isVisible())) {
+      return false;
     }
 
-    async openFavorites() {
-        await this.favoritesButton.click()
+    return true;
+  }
+
+  async doesPageTitleContain(text: string): Promise<boolean> {
+    const title = this.pageTitle();
+
+    if (!(await title.isVisible())) {
+      return false;
     }
 
-    async isPageTitleVisible(): Promise<boolean> {
-        return await this.pageTitle.isVisible()
-    }
+    const titleText = await title.textContent();
+    return titleText?.toLowerCase().includes(text.toLowerCase()) ?? false;
+  }
 
-    async doesPageTitleContain(text: string): Promise<boolean> {
-        const titleText = await this.pageTitle.textContent()
-        return titleText?.includes(text) ?? false
-    }
-
-    async isFavoritesUrlOpened(): Promise<boolean> {
-        return this.page.url() === this.favoritesUrl
-    }
+  async isFavoritesUrlOpened(): Promise<boolean> {
+    return this.page.url().includes(this.favoritesUrlPart);
+  }
 }

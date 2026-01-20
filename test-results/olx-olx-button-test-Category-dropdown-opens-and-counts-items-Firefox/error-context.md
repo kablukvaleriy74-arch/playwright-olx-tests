@@ -1,0 +1,608 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - link "Перейти до основного вмісту" [ref=e7] [cursor=pointer]:
+      - /url: "#mainContent"
+    - link "Перейти до нижнього колонтитула" [ref=e10] [cursor=pointer]:
+      - /url: "#footerContent"
+  - banner [ref=e11]:
+    - generic [ref=e12]:
+      - link [ref=e13] [cursor=pointer]:
+        - /url: /uk/
+      - generic [ref=e18]:
+        - link "Чат" [ref=e19] [cursor=pointer]:
+          - /url: /uk/myaccount/answers/
+          - img [ref=e22]
+          - generic [ref=e24]: Чат
+        - list [ref=e25]:
+          - listitem [ref=e26]: Укр
+          - listitem [ref=e27]:
+            - text: "|"
+            - link "Рус" [ref=e28] [cursor=pointer]:
+              - /url: /
+        - link "Виділені" [ref=e30] [cursor=pointer]:
+          - /url: /uk/favorites/search/
+          - img "Виділені" [ref=e31]
+        - generic [ref=e33]:
+          - button "Повідомлення" [ref=e34] [cursor=pointer]:
+            - generic [ref=e35]: Повідомлення
+            - img [ref=e36]
+          - generic:
+            - generic:
+              - heading "Повідомлення" [level=4]
+        - link "Ваш профіль" [ref=e39] [cursor=pointer]:
+          - /url: http://www.olx.ua/uk/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.ua%2Fuk%2F&ref[0][action]=redirector&ref[0][method]=index
+          - img [ref=e40]
+          - text: Ваш профіль
+        - link "Додати оголошення" [ref=e43] [cursor=pointer]:
+          - /url: /uk/adding
+          - generic [ref=e44]: Додати оголошення
+  - generic [ref=e46]:
+    - generic [ref=e48]:
+      - generic:
+        - text: Реклама
+        - iframe [ref=e49]:
+          
+    - generic [ref=e50]:
+      - generic [ref=e56]:
+        - generic [ref=e60]:
+          - img [ref=e62]
+          - combobox "Що шукаєте?" [ref=e64]
+        - generic [ref=e70]:
+          - img [ref=e72]
+          - combobox "Уся Україна" [ref=e75]
+        - button "Пошук" [ref=e77] [cursor=pointer]:
+          - generic [ref=e78]: Пошук
+          - img [ref=e80]
+      - generic [ref=e84]:
+        - heading "Розділи на сервісі OLX" [level=2] [ref=e85]
+        - generic [ref=e86]:
+          - link "Допомога" [ref=e87] [cursor=pointer]:
+            - /url: /uk/dopomoga/
+            - paragraph [ref=e88]: Допомога
+          - link "Дитячий світ" [ref=e89] [cursor=pointer]:
+            - /url: /uk/detskiy-mir/
+            - paragraph [ref=e90]: Дитячий світ
+          - link "Нерухомість" [ref=e91] [cursor=pointer]:
+            - /url: /uk/nedvizhimost/
+            - paragraph [ref=e92]: Нерухомість
+          - link "Авто" [ref=e93] [cursor=pointer]:
+            - /url: /uk/transport/
+            - paragraph [ref=e94]: Авто
+          - link "Запчастини" [ref=e95] [cursor=pointer]:
+            - /url: /uk/zapchasti-dlya-transporta/
+            - paragraph [ref=e96]: Запчастини
+          - link "Робота" [ref=e97] [cursor=pointer]:
+            - /url: /uk/rabota/
+            - paragraph [ref=e98]: Робота
+          - link "Тварини" [ref=e99] [cursor=pointer]:
+            - /url: /uk/zhivotnye/
+            - paragraph [ref=e100]: Тварини
+          - link "Дім і сад" [ref=e101] [cursor=pointer]:
+            - /url: /uk/dom-i-sad/
+            - paragraph [ref=e102]: Дім і сад
+          - link "Електроніка" [ref=e103] [cursor=pointer]:
+            - /url: /uk/elektronika/
+            - paragraph [ref=e104]: Електроніка
+          - link "Бізнес та послуги" [ref=e105] [cursor=pointer]:
+            - /url: /uk/uslugi/
+            - paragraph [ref=e106]: Бізнес та послуги
+          - link "Житло подобово" [ref=e107] [cursor=pointer]:
+            - /url: /uk/zhytlo-podobovo/
+            - paragraph [ref=e108]: Житло подобово
+          - link "Оренда та прокат" [ref=e109] [cursor=pointer]:
+            - /url: /uk/arenda-prokat/
+            - paragraph [ref=e110]: Оренда та прокат
+          - link "Мода і стиль" [ref=e111] [cursor=pointer]:
+            - /url: /uk/moda-i-stil/
+            - paragraph [ref=e112]: Мода і стиль
+          - link "Хобі, відпочинок і спорт" [ref=e113] [cursor=pointer]:
+            - /url: /uk/hobbi-otdyh-i-sport/
+            - paragraph [ref=e114]: Хобі, відпочинок і спорт
+          - link "Віддам безкоштовно" [ref=e115] [cursor=pointer]:
+            - /url: /uk/otdam-darom/
+            - paragraph [ref=e116]: Віддам безкоштовно
+          - link "Обмін" [ref=e117] [cursor=pointer]:
+            - /url: /uk/obmen-barter/
+            - paragraph [ref=e118]: Обмін
+          - link "До речі, відомі речі" [ref=e119] [cursor=pointer]:
+            - /url: https://business.olx.ua/do-rechi-vidomi-rechi?utm_source=olx&utm_medium=main+page&utm_campaign=Vidomi+rechi
+            - paragraph [ref=e120]: До речі, відомі речі
+          - generic [ref=e121]:
+            - generic: Реклама
+          - generic [ref=e122]:
+            - generic: Реклама
+          - generic [ref=e123]:
+            - generic: Реклама
+      - generic [ref=e124]:
+        - generic [ref=e127]:
+          - text: Реклама
+          - iframe [ref=e129]:
+            - link [ref=f10e2] [cursor=pointer]:
+              - /url: https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjstTUWWgLp2fsWO8yAPeRoIQ3FegpWXdvFUVrVZaZ0OQ0f3akE5qJwKBIB6-dkaNwzWBxTT-P4U7NrYC3vWEjvaI-v5xBQLJPouT0TdDXrct-RZmKbcL6bGlYDnNCOoC9txKbzVGPb8FbGSpjFLvcP8rvcJTIxnKn5fcN0dDdZqqpF6PP8oRrXaeQvD9cKpLGHR2yFLf4gnjlaKHoXNf0Dmc_nRFitCFaNQ4X0qXFD2958A-qvOHfs3I61K4h1ReYSIsI3lff0zjyyEwkqrp-T0d7wvv77d7rm8vwE41vB9vK6GGuS1VEUYH_kw8T5PVy6ynuzNiELhtbBaHt64XE0eHps7_9kJqVwzj84U0H_vqjVRqH-hfuvMtD1oy6a80RQjZBIKsbGMTBwceb0EwHeOwyaPRVhe8fw&sai=AMfl-YTSk3q64-mhmozzr6ZlNG583w2_HrkEJ1wXT-DB0xusFhw8ZKyscSPB0dVY-6wT4jzMpOpTU6RiRxOwbBo0kurOUPn2DBCdWZimeX2jZw2AyPAWHYuTHSsgTq1G0fHcpzTfoCbEWmOWJYUlSNxWjFfzpm-m2u-OV3-0Nhlg6lkLCsto5awxl1usITbVQqjXYGUnTljp89jZdohYSR7r7hrrtuY7wi5CZxtnB6HrpF8e0DHFwjb5pWmwUBbBbMwGCAvxa-BOBL0YRm6fq1EFzRWkW6OqAOI&sig=Cg0ArKJSzEg1WAPL9J_a&fbs_aeid=%5Bgw_fbsaeid%5D&adurl=http://olx.ua
+        - generic [ref=e130]:
+          - heading "VIP-оголошення" [level=2] [ref=e131]
+          - generic [ref=e132]:
+            - generic [ref=e135]:
+              - generic [ref=e136]:
+                - link "Шины 175/70 R13 175/70/13 1757013 Premiorri" [ref=e137] [cursor=pointer]:
+                  - /url: /d/uk/obyavlenie/shiny-175-70-r13-175-70-13-1757013-premiorri-IDSaa0G.html?reason=hp%7Cpromoted
+                  - img "Шины 175/70 R13 175/70/13 1757013 Premiorri" [ref=e140]
+                - img [ref=e147]
+              - generic [ref=e149]:
+                - generic [ref=e150]:
+                  - paragraph [ref=e151]:
+                    - link "Шины 175/70 R13 175/70/13 1757013 Premiorri" [ref=e152] [cursor=pointer]:
+                      - /url: /d/uk/obyavlenie/shiny-175-70-r13-175-70-13-1757013-premiorri-IDSaa0G.html?reason=hp%7Cpromoted
+                  - generic [ref=e155]: 1 498 грн.
+                - generic [ref=e156]:
+                  - paragraph [ref=e157]: Дніпро, Амур-Нижньодніпровський
+                  - paragraph [ref=e158]: 17 січня 2026 р.
+                  - paragraph
+                - button "Шины 175/70 R13 175/70/13 1757013 Premiorri Підписатися" [ref=e159] [cursor=pointer]:
+                  - img [ref=e160]
+            - generic [ref=e164]:
+              - generic [ref=e165]:
+                - link "Сумка сумочка месенджер Nike Heritage 2.0 nsw sportswear найк" [ref=e166] [cursor=pointer]:
+                  - /url: /d/uk/obyavlenie/sumka-sumochka-mesendzher-nike-heritage-2-0-nsw-sportswear-nayk-IDVAtDT.html?reason=hp%7Cpromoted
+                  - img "Сумка сумочка месенджер Nike Heritage 2.0 nsw sportswear найк" [ref=e169]
+                - img [ref=e176]
+              - generic [ref=e178]:
+                - generic [ref=e179]:
+                  - paragraph [ref=e180]:
+                    - link "Сумка сумочка месенджер Nike Heritage 2.0 nsw sportswear найк" [ref=e181] [cursor=pointer]:
+                      - /url: /d/uk/obyavlenie/sumka-sumochka-mesendzher-nike-heritage-2-0-nsw-sportswear-nayk-IDVAtDT.html?reason=hp%7Cpromoted
+                  - generic [ref=e184]: 399 грн.
+                - generic [ref=e185]:
+                  - paragraph [ref=e186]: Ужгород
+                  - paragraph [ref=e187]: Сьогодні о 13:02
+                  - paragraph
+                - button "Сумка сумочка месенджер Nike Heritage 2.0 nsw sportswear найк Підписатися" [ref=e188] [cursor=pointer]:
+                  - img [ref=e189]
+            - generic [ref=e193]:
+              - link "Старенька маленька собачка шукає сім'ю" [ref=e195] [cursor=pointer]:
+                - /url: /d/uk/obyavlenie/starenka-malenka-sobachka-shuka-smyu-IDZBlmJ.html?reason=hp%7Cpromoted
+                - img "Старенька маленька собачка шукає сім'ю" [ref=e198]
+              - generic [ref=e203]:
+                - generic [ref=e204]:
+                  - paragraph [ref=e205]:
+                    - link "Старенька маленька собачка шукає сім'ю" [ref=e206] [cursor=pointer]:
+                      - /url: /d/uk/obyavlenie/starenka-malenka-sobachka-shuka-smyu-IDZBlmJ.html?reason=hp%7Cpromoted
+                  - generic [ref=e209]: Безкоштовно
+                - generic [ref=e210]:
+                  - paragraph [ref=e211]: Одеса, Приморський
+                  - paragraph [ref=e212]: 19 січня 2026 р.
+                  - paragraph
+                - button "Старенька маленька собачка шукає сім'ю Підписатися" [ref=e213] [cursor=pointer]:
+                  - img [ref=e214]
+            - generic [ref=e218]:
+              - link "Продаж 3 к квартири вул. Олександра Олеся буд. 17 ЖК Варшавський 3" [ref=e220] [cursor=pointer]:
+                - /url: /d/uk/obyavlenie/prodazh-3-k-kvartiri-vul-oleksandra-olesya-bud-17-zhk-varshavskiy-3-IDZHwJ3.html?reason=hp%7Cpromoted
+                - img "Продаж 3 к квартири вул. Олександра Олеся буд. 17 ЖК Варшавський 3" [ref=e223]
+              - generic [ref=e228]:
+                - generic [ref=e229]:
+                  - paragraph [ref=e230]:
+                    - link "Продаж 3 к квартири вул. Олександра Олеся буд. 17 ЖК Варшавський 3" [ref=e231] [cursor=pointer]:
+                      - /url: /d/uk/obyavlenie/prodazh-3-k-kvartiri-vul-oleksandra-olesya-bud-17-zhk-varshavskiy-3-IDZHwJ3.html?reason=hp%7Cpromoted
+                  - generic [ref=e234]: 4 752 643.06 грн.
+                - generic [ref=e235]:
+                  - paragraph [ref=e236]: Київ, Подільський
+                  - paragraph [ref=e237]: 18 січня 2026 р.
+                  - paragraph [ref=e238]:
+                    - generic [ref=e239]:
+                      - img [ref=e240]
+                      - text: 84.60 м²
+                - button "Продаж 3 к квартири вул. Олександра Олеся буд. 17 ЖК Варшавський 3 Підписатися" [ref=e242] [cursor=pointer]:
+                  - img [ref=e243]
+            - generic [ref=e247]:
+              - link "макуха соняшника" [ref=e249] [cursor=pointer]:
+                - /url: /d/uk/obyavlenie/makuha-sonyashnika-IDY36aF.html?reason=hp%7Cpromoted
+                - img "макуха соняшника" [ref=e252]
+              - generic [ref=e257]:
+                - generic [ref=e258]:
+                  - paragraph [ref=e259]:
+                    - link "макуха соняшника" [ref=e260] [cursor=pointer]:
+                      - /url: /d/uk/obyavlenie/makuha-sonyashnika-IDY36aF.html?reason=hp%7Cpromoted
+                  - generic [ref=e263]: 12 грн.
+                - generic [ref=e264]:
+                  - paragraph [ref=e265]: Шпола
+                  - paragraph [ref=e266]: 19 січня 2026 р.
+                  - paragraph
+                - button "макуха соняшника Підписатися" [ref=e267] [cursor=pointer]:
+                  - img [ref=e268]
+            - generic [ref=e272]:
+              - link "Продам гарбузи домашні" [ref=e274] [cursor=pointer]:
+                - /url: /d/uk/obyavlenie/prodam-garbuzi-domashn-IDZI488.html?reason=hp%7Cpromoted
+                - img "Продам гарбузи домашні" [ref=e277]
+              - generic [ref=e282]:
+                - generic [ref=e283]:
+                  - paragraph [ref=e284]:
+                    - link "Продам гарбузи домашні" [ref=e285] [cursor=pointer]:
+                      - /url: /d/uk/obyavlenie/prodam-garbuzi-domashn-IDZI488.html?reason=hp%7Cpromoted
+                  - generic [ref=e288]: 10 грн.
+                - generic [ref=e289]:
+                  - paragraph [ref=e290]: Ромни
+                  - paragraph [ref=e291]: 18 січня 2026 р.
+                  - paragraph
+                - button "Продам гарбузи домашні Підписатися" [ref=e292] [cursor=pointer]:
+                  - img [ref=e293]
+            - generic [ref=e297]:
+              - generic [ref=e298]:
+                - link "Iconica/Інвертор гібридний/Инвертор/Inverter hybrid/3000W 24V" [ref=e299] [cursor=pointer]:
+                  - /url: /d/uk/obyavlenie/iconica-nvertor-gbridniy-invertor-inverter-hybrid-3000w-24v-IDR0yV5.html?reason=hp%7Cpromoted
+                  - img "Iconica/Інвертор гібридний/Инвертор/Inverter hybrid/3000W 24V" [ref=e302]
+                - img [ref=e309]
+              - generic [ref=e311]:
+                - generic [ref=e312]:
+                  - paragraph [ref=e313]:
+                    - link "Iconica/Інвертор гібридний/Инвертор/Inverter hybrid/3000W 24V" [ref=e314] [cursor=pointer]:
+                      - /url: /d/uk/obyavlenie/iconica-nvertor-gbridniy-invertor-inverter-hybrid-3000w-24v-IDR0yV5.html?reason=hp%7Cpromoted
+                  - generic [ref=e317]: 19 999 грн.
+                - generic [ref=e318]:
+                  - paragraph [ref=e319]: Хмельницький
+                  - paragraph [ref=e320]: 17 січня 2026 р.
+                  - paragraph
+                - button "Iconica/Інвертор гібридний/Инвертор/Inverter hybrid/3000W 24V Підписатися" [ref=e321] [cursor=pointer]:
+                  - img [ref=e322]
+            - generic [ref=e326]:
+              - link "Продам Плити дорожние" [ref=e328] [cursor=pointer]:
+                - /url: /d/uk/obyavlenie/prodam-pliti-dorozhnie-IDZHpVT.html?reason=hp%7Cpromoted
+                - img "Продам Плити дорожние" [ref=e331]
+              - generic [ref=e336]:
+                - generic [ref=e337]:
+                  - paragraph [ref=e338]:
+                    - link "Продам Плити дорожние" [ref=e339] [cursor=pointer]:
+                      - /url: /d/uk/obyavlenie/prodam-pliti-dorozhnie-IDZHpVT.html?reason=hp%7Cpromoted
+                  - generic [ref=e342]: 650 грн.
+                - generic [ref=e343]:
+                  - paragraph [ref=e344]: Синельникове
+                  - paragraph [ref=e345]: 19 січня 2026 р.
+                  - paragraph
+                - button "Продам Плити дорожние Підписатися" [ref=e346] [cursor=pointer]:
+                  - img [ref=e347]
+            - generic [ref=e351]:
+              - generic [ref=e352]:
+                - link "Мужские футболки New Balance черная белая унисекс нью беленс NB" [ref=e353] [cursor=pointer]:
+                  - /url: /d/uk/obyavlenie/muzhskie-futbolki-new-balance-chernaya-belaya-uniseks-nyu-belens-nb-IDXAsDw.html?reason=hp%7Cpromoted
+                  - img "Мужские футболки New Balance черная белая унисекс нью беленс NB" [ref=e356]
+                - img [ref=e363]
+              - generic [ref=e365]:
+                - generic [ref=e366]:
+                  - paragraph [ref=e367]:
+                    - link "Мужские футболки New Balance черная белая унисекс нью беленс NB" [ref=e368] [cursor=pointer]:
+                      - /url: /d/uk/obyavlenie/muzhskie-futbolki-new-balance-chernaya-belaya-uniseks-nyu-belens-nb-IDXAsDw.html?reason=hp%7Cpromoted
+                  - generic [ref=e371]: 599 грн.
+                - generic [ref=e372]:
+                  - paragraph [ref=e373]: Синельникове
+                  - paragraph [ref=e374]: 19 січня 2026 р.
+                  - paragraph
+                - button "Мужские футболки New Balance черная белая унисекс нью беленс NB Підписатися" [ref=e375] [cursor=pointer]:
+                  - img [ref=e376]
+            - generic [ref=e380]:
+              - link "Аренда дома,Банкетный зал.Новый год,Корпоратив,Свадьба,День рождения" [ref=e382] [cursor=pointer]:
+                - /url: /d/uk/obyavlenie/arenda-doma-banketnyy-zal-novyy-god-korporativ-svadba-den-rozhdeniya-IDYESq0.html?reason=hp%7Cpromoted
+                - img "Аренда дома,Банкетный зал.Новый год,Корпоратив,Свадьба,День рождения" [ref=e385]
+              - generic [ref=e390]:
+                - generic [ref=e391]:
+                  - paragraph [ref=e392]:
+                    - link "Аренда дома,Банкетный зал.Новый год,Корпоратив,Свадьба,День рождения" [ref=e393] [cursor=pointer]:
+                      - /url: /d/uk/obyavlenie/arenda-doma-banketnyy-zal-novyy-god-korporativ-svadba-den-rozhdeniya-IDYESq0.html?reason=hp%7Cpromoted
+                  - generic [ref=e396]: 500 грн.
+                - generic [ref=e397]:
+                  - paragraph [ref=e398]: Дніпро, Центральний
+                  - paragraph [ref=e399]: Сьогодні о 11:46
+                  - paragraph
+                - button "Аренда дома,Банкетный зал.Новый год,Корпоратив,Свадьба,День рождения Підписатися" [ref=e400] [cursor=pointer]:
+                  - img [ref=e401]
+            - generic [ref=e405]:
+              - generic [ref=e406]:
+                - link [ref=e407] [cursor=pointer]:
+                  - /url: /uk/list/user/2hsSy8/
+                  - img [ref=e409]
+                - button "Підписатися" [ref=e410] [cursor=pointer]:
+                  - img [ref=e412]
+              - link "Санітар медичного пункту 40 Окрема БРИГАДА БЕРЕГОВОЇ ОБОРОНИ" [ref=e414] [cursor=pointer]:
+                - /url: /uk/obyavlenie/rabota/santar-medichnogo-punktu40-okrema-brigada-beregovo-oboroni-IDYMuj5.html?reason=hp%7Cpromoted
+                - heading "Санітар медичного пункту 40 Окрема БРИГАДА БЕРЕГОВОЇ ОБОРОНИ" [level=4] [ref=e415]
+              - generic [ref=e418]:
+                - generic [ref=e419]:
+                  - img [ref=e421]
+                  - paragraph [ref=e424]: 23 000 - 123 000 грн. / за місяць
+                - generic [ref=e425]:
+                  - img [ref=e427]
+                  - paragraph [ref=e430]:
+                    - generic [ref=e432] [cursor=pointer]: Тернопіль
+              - paragraph [ref=e436]: 19 січня 2026 р.
+            - generic [ref=e439]:
+              - generic [ref=e440]:
+                - link "Сонячні панелі Longi Hi-MO X10 LR7-72HVD-640М 440 615 620 645 650" [ref=e441] [cursor=pointer]:
+                  - /url: /d/uk/obyavlenie/sonyachn-panel-longi-hi-mo-x10-lr7-72hvd-640m-440-615-620-645-650-IDZvfdM.html?reason=hp%7Cpromoted
+                  - img "Сонячні панелі Longi Hi-MO X10 LR7-72HVD-640М 440 615 620 645 650" [ref=e444]
+                - img [ref=e451]
+              - generic [ref=e453]:
+                - generic [ref=e454]:
+                  - paragraph [ref=e455]:
+                    - link "Сонячні панелі Longi Hi-MO X10 LR7-72HVD-640М 440 615 620 645 650" [ref=e456] [cursor=pointer]:
+                      - /url: /d/uk/obyavlenie/sonyachn-panel-longi-hi-mo-x10-lr7-72hvd-640m-440-615-620-645-650-IDZvfdM.html?reason=hp%7Cpromoted
+                  - generic [ref=e459]: 3 400 грн.
+                - generic [ref=e460]:
+                  - paragraph [ref=e461]: Кременчук
+                  - paragraph [ref=e462]: 18 січня 2026 р.
+                  - paragraph
+                - button "Сонячні панелі Longi Hi-MO X10 LR7-72HVD-640М 440 615 620 645 650 Підписатися" [ref=e463] [cursor=pointer]:
+                  - img [ref=e464]
+            - generic [ref=e468]:
+              - generic [ref=e469]:
+                - link "Щетка насадка для пылесоса" [ref=e470] [cursor=pointer]:
+                  - /url: /d/uk/obyavlenie/schetka-nasadka-dlya-pylesosa-IDUEccn.html?reason=hp%7Cpromoted
+                  - img "Щетка насадка для пылесоса" [ref=e473]
+                - img [ref=e480]
+              - generic [ref=e482]:
+                - generic [ref=e483]:
+                  - paragraph [ref=e484]:
+                    - link "Щетка насадка для пылесоса" [ref=e485] [cursor=pointer]:
+                      - /url: /d/uk/obyavlenie/schetka-nasadka-dlya-pylesosa-IDUEccn.html?reason=hp%7Cpromoted
+                  - generic [ref=e488]: 200 грн.
+                - generic [ref=e489]:
+                  - paragraph [ref=e490]: Дніпро, Соборний
+                  - paragraph [ref=e491]: 19 січня 2026 р.
+                  - paragraph
+                - button "Щетка насадка для пылесоса Підписатися" [ref=e492] [cursor=pointer]:
+                  - img [ref=e493]
+            - generic [ref=e497]:
+              - generic [ref=e498]:
+                - link "Форсунка Рено мастер трафік 2.5dci Опель мовано виваро 2.5dci" [ref=e499] [cursor=pointer]:
+                  - /url: /d/uk/obyavlenie/forsunka-reno-master-trafk-2-5dci-opel-movano-vivaro-2-5dci-IDUPDwt.html?reason=hp%7Cpromoted
+                  - img "Форсунка Рено мастер трафік 2.5dci Опель мовано виваро 2.5dci" [ref=e502]
+                - img [ref=e509]
+              - generic [ref=e511]:
+                - generic [ref=e512]:
+                  - paragraph [ref=e513]:
+                    - link "Форсунка Рено мастер трафік 2.5dci Опель мовано виваро 2.5dci" [ref=e514] [cursor=pointer]:
+                      - /url: /d/uk/obyavlenie/forsunka-reno-master-trafk-2-5dci-opel-movano-vivaro-2-5dci-IDUPDwt.html?reason=hp%7Cpromoted
+                  - generic [ref=e517]: 2 160.69 грн.
+                - generic [ref=e518]:
+                  - paragraph [ref=e519]: Ковель
+                  - paragraph [ref=e520]: 19 січня 2026 р.
+                  - paragraph
+                - button "Форсунка Рено мастер трафік 2.5dci Опель мовано виваро 2.5dci Підписатися" [ref=e521] [cursor=pointer]:
+                  - img [ref=e522]
+            - generic [ref=e526]:
+              - generic [ref=e527]:
+                - link "Плитоноска Velmet" [ref=e528] [cursor=pointer]:
+                  - /url: /d/uk/obyavlenie/plitonoska-velmet-IDZCovL.html?reason=hp%7Cpromoted
+                  - img "Плитоноска Velmet" [ref=e531]
+                - img [ref=e538]
+              - generic [ref=e540]:
+                - generic [ref=e541]:
+                  - paragraph [ref=e542]:
+                    - link "Плитоноска Velmet" [ref=e543] [cursor=pointer]:
+                      - /url: /d/uk/obyavlenie/plitonoska-velmet-IDZCovL.html?reason=hp%7Cpromoted
+                  - generic [ref=e546]: 12 265 грн.
+                - generic [ref=e547]:
+                  - paragraph [ref=e548]: Суми
+                  - paragraph [ref=e549]: 18 січня 2026 р.
+                  - paragraph
+                - button "Плитоноска Velmet Підписатися" [ref=e550] [cursor=pointer]:
+                  - img [ref=e551]
+            - generic [ref=e555]:
+              - generic [ref=e556]:
+                - link "Steelbook 4K Ultra Blu-ray Великий уравнитель 1-3 Лучший стрелок 1-2" [ref=e557] [cursor=pointer]:
+                  - /url: /d/uk/obyavlenie/steelbook-4k-ultra-blu-ray-velikiy-uravnitel-1-3-luchshiy-strelok-1-2-IDZIkbh.html?reason=hp%7Cpromoted
+                  - img "Steelbook 4K Ultra Blu-ray Великий уравнитель 1-3 Лучший стрелок 1-2" [ref=e560]
+                - img [ref=e567]
+              - generic [ref=e569]:
+                - generic [ref=e570]:
+                  - paragraph [ref=e571]:
+                    - link "Steelbook 4K Ultra Blu-ray Великий уравнитель 1-3 Лучший стрелок 1-2" [ref=e572] [cursor=pointer]:
+                      - /url: /d/uk/obyavlenie/steelbook-4k-ultra-blu-ray-velikiy-uravnitel-1-3-luchshiy-strelok-1-2-IDZIkbh.html?reason=hp%7Cpromoted
+                  - generic [ref=e575]: 700 грн.
+                - generic [ref=e576]:
+                  - paragraph [ref=e577]: Хмельницький
+                  - paragraph [ref=e578]: 19 січня 2026 р.
+                  - paragraph
+                - button "Steelbook 4K Ultra Blu-ray Великий уравнитель 1-3 Лучший стрелок 1-2 Підписатися" [ref=e579] [cursor=pointer]:
+                  - img [ref=e580]
+      - generic [ref=e583]:
+        - img "icon" [ref=e584]
+        - generic [ref=e585]:
+          - generic [ref=e586]: Виділяйтеся як компанія!
+          - heading "Перегляньте пропозицію OLX для бізнесу" [level=4] [ref=e587]
+        - link "Детальніше" [ref=e588] [cursor=pointer]:
+          - /url: https://business.olx.ua/uk
+          - generic [ref=e589]: Детальніше
+      - generic [ref=e590]:
+        - img [ref=e591]
+        - generic [ref=e594]:
+          - text: Усі онлайн-оголошення України на OLX - тут ви знайдете те, що шукали! Натиснувши на кнопку Подати оголошення, ви зможете розмістити оголошення на будь-яку тематику легко й швидко.
+          - text: За допомогою сервісу OLX ви зможете купити чи продати з рук у руки практично все, що завгодно.
+        - generic [ref=e595]:
+          - generic [ref=e596]: "Спільноти OLX в соціальних мережах:"
+          - generic [ref=e597]:
+            - link [ref=e598] [cursor=pointer]:
+              - /url: https://www.facebook.com/olx.ua
+              - img [ref=e599]
+            - link [ref=e601] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/olxua
+              - img [ref=e602]
+            - link [ref=e604] [cursor=pointer]:
+              - /url: https://twitter.com/olx_ua
+              - img [ref=e605]
+      - generic [ref=e608]:
+        - generic [ref=e609]:
+          - img "icon" [ref=e611]
+          - generic [ref=e612]:
+            - generic [ref=e613]: "Розділи на сервісі OLX:"
+            - link "Допомога," [ref=e614] [cursor=pointer]:
+              - /url: /uk/dopomoga/
+            - link "Дитячий світ," [ref=e615] [cursor=pointer]:
+              - /url: /uk/detskiy-mir/
+            - link "Нерухомість," [ref=e616] [cursor=pointer]:
+              - /url: /uk/nedvizhimost/
+            - link "Авто," [ref=e617] [cursor=pointer]:
+              - /url: /uk/transport/
+            - link "Запчастини," [ref=e618] [cursor=pointer]:
+              - /url: /uk/zapchasti-dlya-transporta/
+            - link "Робота," [ref=e619] [cursor=pointer]:
+              - /url: /uk/rabota/
+            - link "Тварини," [ref=e620] [cursor=pointer]:
+              - /url: /uk/zhivotnye/
+            - link "Дім і сад," [ref=e621] [cursor=pointer]:
+              - /url: /uk/dom-i-sad/
+            - link "Електроніка," [ref=e622] [cursor=pointer]:
+              - /url: /uk/elektronika/
+            - link "Бізнес та послуги," [ref=e623] [cursor=pointer]:
+              - /url: /uk/uslugi/
+            - link "Житло подобово," [ref=e624] [cursor=pointer]:
+              - /url: /uk/zhytlo-podobovo/
+            - link "Оренда та прокат," [ref=e625] [cursor=pointer]:
+              - /url: /uk/arenda-prokat/
+            - link "Мода і стиль," [ref=e626] [cursor=pointer]:
+              - /url: /uk/moda-i-stil/
+            - link "Хобі, відпочинок і спорт," [ref=e627] [cursor=pointer]:
+              - /url: /uk/hobbi-otdyh-i-sport/
+            - link "Віддам безкоштовно," [ref=e628] [cursor=pointer]:
+              - /url: /uk/otdam-darom/
+            - link "Обмін" [ref=e629] [cursor=pointer]:
+              - /url: /uk/obmen-barter/
+        - generic [ref=e630]:
+          - img "icon" [ref=e632]
+          - generic [ref=e633]:
+            - generic [ref=e634]: "Популярні запити:"
+            - link "шифер," [ref=e635] [cursor=pointer]:
+              - /url: /uk/dom-i-sad/q-шифер/
+            - link "автоэлектрик 1," [ref=e636] [cursor=pointer]:
+              - /url: /uk/uslugi/q-автоэлектрик-1/
+            - link "ремонт холодильников," [ref=e637] [cursor=pointer]:
+              - /url: /uk/uslugi/q-ремонт-холодильников/
+            - link "аренда," [ref=e638] [cursor=pointer]:
+              - /url: /uk/nedvizhimost/q-аренда/
+            - link "дельта," [ref=e639] [cursor=pointer]:
+              - /url: /uk/transport/q-дельта/
+            - link "tekken 250," [ref=e640] [cursor=pointer]:
+              - /url: /uk/transport/q-tekken-250/
+            - link "заправка кондиционера," [ref=e641] [cursor=pointer]:
+              - /url: /uk/uslugi/q-заправка-кондиционера/
+            - link "geon gns 300," [ref=e642] [cursor=pointer]:
+              - /url: /uk/transport/q-geon-gns-300/
+            - link "альфа," [ref=e643] [cursor=pointer]:
+              - /url: /uk/transport/q-альфа/
+            - link "lifan 150," [ref=e644] [cursor=pointer]:
+              - /url: /uk/transport/q-lifan-150/
+            - link "питбайк 125," [ref=e645] [cursor=pointer]:
+              - /url: /uk/transport/q-питбайк-125/
+            - link "оренда," [ref=e646] [cursor=pointer]:
+              - /url: /uk/nedvizhimost/q-оренда/
+            - link "питбайк," [ref=e647] [cursor=pointer]:
+              - /url: /uk/transport/q-питбайк/
+            - link "установка кондиционера," [ref=e648] [cursor=pointer]:
+              - /url: /uk/uslugi/q-установка-кондиционера/
+            - link "маска для квадробики," [ref=e649] [cursor=pointer]:
+              - /url: /uk/detskiy-mir/q-маска-для-квадробики/
+            - link "автоэлектрик 2," [ref=e650] [cursor=pointer]:
+              - /url: /uk/uslugi/q-автоэлектрик-2/
+            - link "yamaha r1," [ref=e651] [cursor=pointer]:
+              - /url: /uk/transport/q-yamaha-r1/
+            - link "ремонт холодильников," [ref=e652] [cursor=pointer]:
+              - /url: /uk/uslugi/q-ремонт холодильников/
+            - link "honda dio," [ref=e653] [cursor=pointer]:
+              - /url: /uk/transport/q-honda-dio/
+            - link "Книги" [ref=e654] [cursor=pointer]:
+              - /url: /uk/hobbi-otdyh-i-sport/q-Книги/
+  - generic [ref=e656]:
+    - generic [ref=e657]:
+      - list [ref=e658]:
+        - listitem [ref=e659]:
+          - link "Мобільні додатки" [ref=e660] [cursor=pointer]:
+            - /url: https://www.olx.ua/uk/mobileapps
+        - listitem [ref=e661]:
+          - link "Допомога та Зворотній зв'язок" [ref=e662] [cursor=pointer]:
+            - /url: https://help.olx.ua/olxuahelp/s/
+        - listitem [ref=e663]:
+          - link "Платні послуги" [ref=e664] [cursor=pointer]:
+            - /url: https://www.olx.ua/uk/payment/features/
+        - listitem [ref=e665]:
+          - link "Бізнес на OLX" [ref=e666] [cursor=pointer]:
+            - /url: https://business.olx.ua
+        - listitem [ref=e667]:
+          - link "Блог OLX" [ref=e668] [cursor=pointer]:
+            - /url: https://blog.olx.ua/uk
+        - listitem [ref=e669]:
+          - link "Умови користування" [ref=e670] [cursor=pointer]:
+            - /url: https://help.olx.ua/olxuahelp/s/topic/0TO09000000khNwGAI/правова-iнформація-та-приватність
+        - listitem [ref=e671]:
+          - link "Політика конфіденційності" [ref=e672] [cursor=pointer]:
+            - /url: https://help.olx.ua/olxuahelp/s/article/політика-конфіденційності-V27
+        - listitem [ref=e673]:
+          - link "Реклама на сайті" [ref=e674] [cursor=pointer]:
+            - /url: https://blog.olx.ua/uk/o-nas/reklama-na-olx-ua/
+        - listitem [ref=e675]:
+          - link "Для преси" [ref=e676] [cursor=pointer]:
+            - /url: https://blog.olx.ua/uk/o-nas/dlya-pressyi
+      - list [ref=e677]:
+        - listitem [ref=e678]:
+          - link "Правила безпеки" [ref=e679] [cursor=pointer]:
+            - /url: https://safety.olx.ua/
+        - listitem [ref=e680]:
+          - link "Карта сайту" [ref=e681] [cursor=pointer]:
+            - /url: /uk/sitemap/
+        - listitem [ref=e682]:
+          - link "Карта регіонів" [ref=e683] [cursor=pointer]:
+            - /url: /uk/sitemap/regions/
+        - listitem [ref=e684]:
+          - link "Карта бізнес-сторінок" [ref=e685] [cursor=pointer]:
+            - /url: /uk/sitemap/shops/
+        - listitem [ref=e686]:
+          - link "Популярні запити" [ref=e687] [cursor=pointer]:
+            - /url: /uk/popular/
+        - listitem [ref=e688]:
+          - link "Робота в OLX" [ref=e689] [cursor=pointer]:
+            - /url: https://www.olxgroup.com/careers
+        - listitem [ref=e690]:
+          - link "Роботодавці на OLX" [ref=e691] [cursor=pointer]:
+            - /url: /uk/employers/?bs=footer
+        - listitem [ref=e692]:
+          - link "Як продавати й купувати?" [ref=e693] [cursor=pointer]:
+            - /url: https://www.olx.ua/uk/howitworks
+        - listitem [ref=e694]:
+          - link "OLX доставка" [ref=e695] [cursor=pointer]:
+            - /url: https://dostavka.olx.ua/
+      - generic [ref=e696]:
+        - list [ref=e697]:
+          - listitem [ref=e698]:
+            - link "Google Play" [ref=e699] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=ua.slando&referrer=utm_source%3Dolx.ua%26utm_medium%3Dcpc%26utm_campaign%3Dandroid-app-footer
+              - img "Google Play" [ref=e700]
+          - listitem [ref=e701]:
+            - link "App Store" [ref=e702] [cursor=pointer]:
+              - /url: https://itunes.apple.com/ua/app/slando.ua-besplatnye-ob-avlenia/id663217552?l=pl&ls=1&mt=8
+              - img "App Store" [ref=e703]
+        - generic [ref=e704]: Безкоштовний застосунок на твій телефон
+    - generic [ref=e706]:
+      - link "OLX.bg" [ref=e707] [cursor=pointer]:
+        - /url: https://olx.bg
+        - img [ref=e709]
+        - text: OLX.bg
+      - link "OLX.pl" [ref=e714] [cursor=pointer]:
+        - /url: https://olx.pl
+        - img [ref=e716]
+        - text: OLX.pl
+      - link "OLX.ro" [ref=e721] [cursor=pointer]:
+        - /url: https://olx.ro
+        - img [ref=e723]
+        - text: OLX.ro
+      - link "OLX.pt" [ref=e728] [cursor=pointer]:
+        - /url: https://olx.pt
+        - img [ref=e730]
+        - text: OLX.pt
+  - generic [ref=e737]:
+    - img "Cookie Layer" [ref=e739]
+    - paragraph [ref=e741]:
+      - text: Цей сайт використовує cookies. Ви можете змінити налаштування cookies у своєму браузері.
+      - link "Дізнатись більше." [ref=e742] [cursor=pointer]:
+        - /url: https://help.olx.ua/olxuahelp/s/article/політика-використання-cookies-V28
+    - button "Закрити" [ref=e744] [cursor=pointer]:
+      - generic [ref=e745]: Закрити
+```
