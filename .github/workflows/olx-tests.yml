@@ -1,0 +1,35 @@
+name: Run OLX Playwright Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-olx-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci  
+
+      - name: Install Playwright browsers
+        run: npx playwright install
+        shell: bash
+
+      - name: Run OLX Playwright tests
+        run: npx playwright test olx --reporter=github
+
+      - name: Run OLX Playwright tests
+        run: npx playwright test olx --reporter=github
