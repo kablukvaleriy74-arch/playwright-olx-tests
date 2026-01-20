@@ -1,19 +1,28 @@
-import { PlaywrightTestConfig } from "@playwright/test"
-import path from "path"
+import { PlaywrightTestConfig } from "@playwright/test";
+import fs from "fs";
+import path from "path";
+
+// Створюємо папку artifacts, якщо її немає
+const artifactsDir = path.join(__dirname, "artifacts");
+if (!fs.existsSync(artifactsDir)) {
+  fs.mkdirSync(artifactsDir, { recursive: true });
+  console.log(`Created artifacts folder at: ${artifactsDir}`);
+}
 
 const config: PlaywrightTestConfig = {
-    timeout: 60000, 
-    retries: 0,
-    outputDir: path.join(process.cwd(), "artifacts"),
-    use: {
-        headless: true,
-        viewport: { width: 1280, height: 720}, 
-        actionTimeout: 15000,
-        ignoreHTTPSErrors: true, 
-        video: "on",
-        screenshot: "on",
-        trace: "on",
-    },
+  timeout: 60000,
+  retries: 0,
+  outputDir: artifactsDir, // загальна папка для артефактів
+  use: {
+    headless: true,
+    viewport: { width: 1280, height: 720 },
+    actionTimeout: 15000,
+    ignoreHTTPSErrors: true,
+
+   video: "on", // або "retain-on-failure" для збереження тільки при падінні
+    screenshot: "only-on-failure", // "on", "off", "only-on-failure"
+    trace: "on", 
+  },
     projects: [
     {
         name: "chromium",
