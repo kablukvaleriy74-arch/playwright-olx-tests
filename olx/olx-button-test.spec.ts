@@ -1,7 +1,7 @@
 import { test } from "@playwright/test"
 import { CategoryPage } from "../page-objects/CategoryPage"
 
-test.only("Category dropdown opens and counts items", async ({ page }) => {
+test("Category dropdown opens and counts items", async ({ page }) => {
     const categoryPage = new CategoryPage(page)
 
     await categoryPage.open()
