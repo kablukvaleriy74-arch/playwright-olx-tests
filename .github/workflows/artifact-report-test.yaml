@@ -1,0 +1,81 @@
+name: Run OLX Playwright Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-olx-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Витягуємо код з репозиторію
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Встановлюємо Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # 3. Встановлюємо залежності
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Встановлюємо браузери Playwright
+      - name: Install Playwright browsers
+        run: npx playwright install
+
+      # 5. Створюємо папки для збереження артефактів
+      - name: Prepare report directories
+        run: |
+          mkdir -p playwright-report
+          mkdir -p playwright-screenshots
+          mkdir -p playwright-videos
+
+      # 6. Запускаємо Playwright тести з HTML репортом, скріншотами і відео
+      - name: Run OLX Playwright tests
+        run: |
+          npx playwright test olx \
+            --reporter=html \
+            --output=playwright-artifacts
+        env:
+          PWVIDEO: on
+          PWSCREENSHOT: on
+
+      # 7. Копіюємо артефакти в окремі папки
+      - name: Move artifacts
+        run: |
+          cp -r playwright-artifacts/html/* playwright-report/ || true
+          cp -r playwright-artifacts/screenshots/* playwright-screenshots/ || true
+          cp -r playwright-artifacts/videos/* playwright-videos/ || true
+
+      # 8. Лістинг файлів для перевірки
+      - name: List artifact files
+        run: ls -R playwright-report playwright-screenshots playwright-videos
+
+      # 9. Завантажуємо HTML репорт
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-report
+          path: playwright-report
+
+      # 10. Завантажуємо скріншоти
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-screenshots
+          path: playwright-screenshots
+
+      # 11. Завантажуємо відео
+      - name: Upload videos
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-videos
+          path: playwright-videos
