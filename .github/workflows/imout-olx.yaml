@@ -1,0 +1,54 @@
+name: Run OLX Playwright Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-olx-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Витягуємо код
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # 3. Залежності
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Браузери Playwright
+      - name: Install Playwright browsers
+        run: npx playwright install
+
+      # 5. Створюємо папку artifacts (щоб точно була)
+      - name: Create artifacts folder
+        run: mkdir -p artifacts
+
+      # 6. Запуск тестів Playwright з відео, скріншотами та HTML репортом
+      - name: Run Playwright tests
+        run: |
+          npx playwright test olx \
+            --reporter=html \
+            --output=artifacts
+
+      # 7. Перевірка вмісту
+      - name: List artifacts
+        run: ls -R artifacts
+
+      # 8. Завантаження артефактів
+      - name: Upload all artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-artifacts
+          path: artifacts
